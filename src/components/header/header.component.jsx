@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom'
 
 import './header.styles.scss';
 
-import { auth } from '../../firebase/firebase.utils'
+import { auth } from '../../firebase/firebase.utils';
+
 
 import { ReactComponent as Logo } from '../../assets/crown.svg'
 const Header = ({ currentUser }) => (
@@ -27,4 +28,4 @@ const Header = ({ currentUser }) => (
     </div>
 )
 
-export default Header;
+export default  Header;
