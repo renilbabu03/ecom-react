@@ -4,7 +4,6 @@ import './checkout.styles.scss';
 
 import { connect } from 'react-redux';
 import CheckoutItem from '../../components/checkout-item/checkout-item.component'
-
 import { createStructuredSelector } from 'reselect'
 import { selectCartItems,selectCartTotal } from '../../redux/cart/cart.selectors'
 
