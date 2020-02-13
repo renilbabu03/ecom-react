@@ -5,7 +5,9 @@ import './checkout.styles.scss';
 import { connect } from 'react-redux';
 import CheckoutItem from '../../components/checkout-item/checkout-item.component'
 import { createStructuredSelector } from 'reselect'
-import { selectCartItems,selectCartTotal } from '../../redux/cart/cart.selectors'
+import { selectCartItems,selectCartTotal } from '../../redux/cart/cart.selectors';
+
+import StripeCheckoutButton from '../../components/stripe-button/stripe-button.component'
 
 const CheckoutPage = ({cartItems,total}) => (
     <div className='checkout-page'>
@@ -32,6 +34,7 @@ const CheckoutPage = ({cartItems,total}) => (
         <div className='total'>
             <span>Total : ${total}</span>
         </div>
+        <StripeCheckoutButton price={total}/>
     </div>
 )
 
